@@ -3,7 +3,33 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mock: true,
+  api: '/1.0',
+  supportLangs: [
+    {
+      value: 'en',
+      label: 'EN',
+      isRtl: false,
+    },
+    {
+      value: 'ua',
+      label: 'UA',
+      isRtl: false,
+    },
+  ],
+  supportThemes: [
+    {
+      value: 'default',
+      label: 'Lazy Blue',
+      default: true
+    },
+    {
+      value: 'greenStyle',
+      label: 'Nice Green',
+      default: false
+    },
+  ],
 };
 
 /*

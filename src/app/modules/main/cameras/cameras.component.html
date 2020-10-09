@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="title">{{'cameras-page.title' | translate}}</div>
+  <div class="active-camers">{{"cameras-page.active" | translate}}: {{ camers.length}}</div>
+  <div class="cameras-container">
+    <ng-container *ngFor="let camera of camers">
+      <div class="camera">
+        <div class='camera-title'>{{camera.title | translate}}</div>
+        <div class='photo-container'>
+          <img [src]='camera.img' alt="">
+
+        </div>
+
+      </div>
+    </ng-container>
+
+  </div>
+</div>

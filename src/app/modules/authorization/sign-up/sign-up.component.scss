@@ -1,0 +1,47 @@
+:host {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  min-width: 360px;
+  max-width: 360px;
+  min-height: 500px;
+  color: #333;
+  background: white;
+
+  .form {
+    position: absolute;
+    width: 100px;
+    display: inline-table;
+    align-self: center;
+  }
+  .button-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sign-message {
+      margin-top: 20px;
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+  }
+  button {
+    margin: auto;
+  }
+  .title {
+    margin-top: 10px;
+    height: fit-content;
+  }
+}

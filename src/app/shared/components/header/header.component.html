@@ -1,0 +1,84 @@
+<div class="header">
+  <div class="logo">
+    <a routerLink="/">
+      <img src="../../../../assets/images/icon/camera.png" alt="">
+
+    </a>
+  </div>
+  <div class="menu">
+    <div class="descktop-menu">
+      <div class='link-container'>
+        <button routerLink="/cameras" mat-button>
+          {{'header.cameras' | translate}}
+        </button>
+      </div>
+      <div class='link-container'>
+        <button routerLink="/reporting" mat-button>
+          {{'header.reporting' | translate}}
+        </button>
+      </div>
+      <div class='link-container'>
+        <button routerLink="/settings" mat-button>
+          {{'header.settings' | translate}}
+        </button>
+      </div>
+
+    </div>
+
+    <div class="mobile-menu">
+
+      <button mat-icon-button [matMenuTriggerFor]="menuMobile">
+        {{'header.menu.title' | translate}}
+      </button>
+      <mat-menu #menuMobile="matMenu">
+        <button routerLink="/settings" mat-menu-item>
+          {{'header.settings' | translate}}
+        </button>
+        <button routerLink="/reporting" mat-menu-item>
+          {{'header.reporting' | translate}}
+        </button>
+        <button routerLink="/cameras" mat-menu-item>
+          {{'header.cameras' | translate}}
+        </button>
+      </mat-menu>
+
+    </div>
+
+    <div class="link-container">
+      <button class="menu-button" mat-button [matMenuTriggerFor]="themeSelect">
+        {{ (theme$ | async) }}
+      </button>
+      <mat-menu class='mat-menu-container' #themeSelect="matMenu">
+        <ng-container *ngFor="let theme of themes">
+          <button mat-menu-item (click)="changeThem(theme)">
+            <div> {{ theme.label }}</div>
+          </button>
+        </ng-container>
+      </mat-menu>
+    </div>
+    <div class="link-container">
+      <div class="language-position">
+        <button class="menu-button" mat-button [matMenuTriggerFor]="menuSelect">
+          {{ (language$ | async).label }}
+        </button>
+        <mat-menu class='mat-menu-container' #menuSelect="matMenu">
+          <ng-container *ngFor="let language of languages">
+            <button mat-menu-item (click)="changeLang(language.value)">
+              <div> {{ language.label }}</div>
+            </button>
+          </ng-container>
+        </mat-menu>
+      </div>
+    </div>
+    <div class="link-container">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          {{'header.menu.logout' | translate}}
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</div>

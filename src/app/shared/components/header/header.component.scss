@@ -1,0 +1,82 @@
+@import "../../../../assets/scss/all-vars-and-mixins";
+@import "../../../../assets/scss/themes.scss";
+
+.header {
+  @include themify($themes) {
+    @debug "background: #{themed("background")}";
+    background: themed("background");
+  }
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 100px;
+  .logo {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .menu {
+    display: flex;
+    .descktop-menu {
+      display: flex;
+    }
+    .mobile-menu {
+      display: none;
+    }
+    .link-container {
+      margin: 0 14px;
+      display: flex;
+      align-items: center;
+      button {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-family: $primary-font;
+        color: black;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $tablet) {
+  .header {
+    padding: 5px 50px;
+    .logo {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .menu {
+      .descktop-menu {
+        display: none;
+      }
+      .mobile-menu {
+        display: initial;
+      }
+      .link-container {
+        margin: 0 7px;
+        button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $large-handset) {
+  .header {
+    padding: 5px 25px;
+    .logo {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .menu {
+      .link-container {
+        margin: 0 3px;
+        button {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

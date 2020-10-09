@@ -1,0 +1,28 @@
+{
+  "header": {
+    "cameras": "cameras",
+    "reporting": "reporting",
+    "settings": "settings",
+    "menu": {
+      "title": "menu",
+      "logout": "logout"
+    }
+  },
+  "cameras-page": {
+    "title": "Camers Status",
+    "active": "active camers"
+  },
+  "camers": {
+    "title-1": "title-1",
+    "title-2": "title-2",
+    "title-3": "title-3",
+    "title-4": "title-4",
+    "title-5": "title-5",
+    "title-6": "title-6",
+    "title-7": "title-7"
+  },
+  "home": {
+    "title": "Welcome",
+    "description": "You can check the status of the cameras by clicking the 'cameras' button"
+  }
+}

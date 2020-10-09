@@ -1,0 +1,32 @@
+{
+  "camers": [
+    {
+      "title": "camers.title-1",
+      "img": "/assets/images/cameras_photo/ashford-1.jpg"
+    },
+    {
+      "title": "camers.title-2",
+      "img": "/assets/images/cameras_photo/ashford-2.jpg"
+    },
+    {
+      "title": "camers.title-3",
+      "img": "/assets/images/cameras_photo/ashford-3.jpg"
+    },
+    {
+      "title": "camers.title-4",
+      "img": "/assets/images/cameras_photo/ashford-4.jpg"
+    },
+    {
+      "title": "camers.title-5",
+      "img": "/assets/images/cameras_photo/ashford-5.jpg"
+    },
+    {
+      "title": "camers.title-6",
+      "img": "/assets/images/cameras_photo/ashford-6.jpg"
+    },
+    {
+      "title": "camers.title-7",
+      "img": "/assets/images/cameras_photo/ashford-7.jpg"
+    }
+  ]
+}

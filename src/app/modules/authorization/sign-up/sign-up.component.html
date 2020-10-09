@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="title">
+    <h1>Sign up</h1>
+  </div>
+  <div class="form">
+    <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter your email" formControlName="email" required>
+        <mat-error *ngIf="form.get('email').invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input type="password" matInput placeholder="Enter your password" formControlName="password" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter your Name" formControlName="firstName" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter your Surname" formControlName="lastName" required>
+      </mat-form-field>
+      <div class="button-position">
+        <button mat-raised-button color="primary" type="submit">Sign up</button>
+        <div class="sign-message">
+          Alredy have account?
+          <a routerLink="/auth/sign-in">Sign in</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

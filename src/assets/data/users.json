@@ -1,0 +1,23 @@
+[
+  {
+    "firstName": "Maks",
+    "lastName": "Maks",
+    "password": "maks3226",
+    "email": "maks@gmail.com",
+    "token": "maks_token"
+  },
+  {
+    "firstName": "Elen",
+    "lastName": "Elen",
+    "password": "elen",
+    "email": "elen@gmail.com",
+    "token": "elen_token"
+  },
+  {
+    "firstName": "Test",
+    "lastName": "Test",
+    "password": "test",
+    "email": "test@gmail.com",
+    "token": "test_token"
+  }
+]
