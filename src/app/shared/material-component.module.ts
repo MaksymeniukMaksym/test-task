@@ -8,6 +8,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [],
   imports: [
@@ -18,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
+    MatCardModule,
   ],
   exports: [
     MatInputModule,
@@ -27,6 +29,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
+    MatCardModule,
   ],
   providers: [],
 })
