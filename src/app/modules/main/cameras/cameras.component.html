@@ -1,16 +1,36 @@
-<div class="container">
+<div class="container" *ngIf="isCameraData">
   <div class="title">{{'cameras-page.title' | translate}}</div>
   <div class="active-camers">{{"cameras-page.active" | translate}}: {{ camers.length}}</div>
   <div class="cameras-container">
-    <ng-container *ngFor="let camera of camers">
-      <div class="camera">
-        <div class='camera-title'>{{camera.title | translate}}</div>
-        <div class='photo-container'>
-          <img [src]='camera.img' alt="">
+    <ng-container *ngFor="let camera of camers; let j = index">
+      <mat-card class="card">
+        <ng-container *ngFor="let cadr of camera.cadrs; let i = index">
+          <ng-container *ngIf="camera.active === i">
+            <div class="img-container">
+              <img mat-card-image [src]='cadr.cadr' alt="cadr">
+            </div>
+            <div class="description">
+              <div class="title">
+                <mat-card-title>Камера {{j+1}}</mat-card-title>
+                <mat-card-subtitle>{{ cadr.cadr | urlToName }}</mat-card-subtitle>
+              </div>
+              <div class="status">
+                <div class="status-icon">
+                  <div class="green" [ngClass]="{'active': cadr.status}"></div>
+                  <div class="red" [ngClass]="{'active': !cadr.status}"></div>
+                </div>
+                <div class="status-text">
+                  <span class='green' *ngIf="cadr.status"> PASS</span>
+                  <span class='red' *ngIf="!cadr.status"> FAILD</span>
+                </div>
+              </div>
+            </div>
+          </ng-container>
 
-        </div>
+        </ng-container>
 
-      </div>
+
+      </mat-card>
     </ng-container>
 
   </div>
