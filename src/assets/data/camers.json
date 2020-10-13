@@ -2,31 +2,134 @@
   "camers": [
     {
       "title": "camers.title-1",
-      "img": "/assets/images/cameras_photo/ashford-1.jpg"
+      "cadrs": [
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-1/photo-1.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-1/photo-2.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-1/photo-3.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-1/photo-4.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-1/photo-5.jpg",
+          "status": false
+        }
+      ],
+      "active": 0
     },
     {
       "title": "camers.title-2",
-      "img": "/assets/images/cameras_photo/ashford-2.jpg"
+      "cadrs": [
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-2/photo-1.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-2/photo-2.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-2/photo-3.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-2/photo-4.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-2/photo-5.jpg",
+          "status": false
+        }
+      ],
+      "active": 0,
+      "cadrStatus": false
     },
     {
       "title": "camers.title-3",
-      "img": "/assets/images/cameras_photo/ashford-3.jpg"
+      "cadrs": [
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-3/photo-1.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-3/photo-2.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-3/photo-3.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-3/photo-4.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-3/photo-5.jpg",
+          "status": false
+        }
+      ],
+      "active": 0
     },
     {
       "title": "camers.title-4",
-      "img": "/assets/images/cameras_photo/ashford-4.jpg"
+      "cadrs": [
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-4/photo-1.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-4/photo-2.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-4/photo-3.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-4/photo-4.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-4/photo-5.jpg",
+          "status": false
+        }
+      ],
+      "active": 0
     },
     {
       "title": "camers.title-5",
-      "img": "/assets/images/cameras_photo/ashford-5.jpg"
-    },
-    {
-      "title": "camers.title-6",
-      "img": "/assets/images/cameras_photo/ashford-6.jpg"
-    },
-    {
-      "title": "camers.title-7",
-      "img": "/assets/images/cameras_photo/ashford-7.jpg"
+      "cadrs": [
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-5/photo-1.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-5/photo-2.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-5/photo-3.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-5/photo-4.jpg",
+          "status": false
+        },
+        {
+          "cadr": "/assets/images/cameras-photo/photo-set-5/photo-5.jpg",
+          "status": false
+        }
+      ],
+      "active": 0
     }
   ]
 }
