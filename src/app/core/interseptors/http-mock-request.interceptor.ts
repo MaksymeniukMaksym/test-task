@@ -9,6 +9,7 @@ import {
 import { Observable, of } from 'rxjs';
 import * as users from '../../../assets/data/users.json';
 import * as camers from '../../../assets/data/camers.json';
+import { MathService } from '../services/math.service';
 
 const urls = [
   {
@@ -30,7 +31,7 @@ const urls = [
 
 @Injectable()
 export class HttpMockRequestInterceptor implements HttpInterceptor {
-  constructor(private injector: Injector) {}
+  constructor(private injector: Injector, private mathService: MathService) {}
 
   intercept(
     request: HttpRequest<any>,
@@ -56,6 +57,8 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
             request.body,
             (element.json as any).default
           );
+        } else if (element.method === 'get-camers') {
+          response = this.getCamers((element.json as any).default);
         } else {
           response = new HttpResponse({
             status: 200,
@@ -71,8 +74,6 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
   }
 
   private loginUser(request, usersData): HttpResponse<any> {
-    console.log(request);
-    console.log(usersData);
     for (const user of usersData) {
       if (user.email === request.email) {
         if (user.password === request.password) {
@@ -89,7 +90,16 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
     });
   }
 
-  getCamers(request, data) {}
+  private getCamers(data): HttpResponse<any> {
+    const camersData = [...data.camers];
+    const camersLength = 4;
+    const randomCamersData = this.randomData(camersData, camersLength);
+
+    return new HttpResponse({
+      status: 200,
+      body: randomCamersData,
+    });
+  }
 
   public registerUser(request, usersData): HttpResponse<any> {
     const newUser = {
@@ -101,5 +111,18 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
       status: 200,
       body: newUser,
     });
+  }
+
+  private randomData(data: Array<any>, length: number): Array<any> {
+    const newData = [];
+    for (let i = 0; i < length; i++) {
+      const randomIndex = this.mathService.getRandomInt(data.length);
+      data[randomIndex].cadrs.forEach((cadr) => {
+        cadr.status = !!this.mathService.getRandomInt(2);
+      });
+      const choosenElement = data.splice(randomIndex, 1)[0];
+      newData.push(choosenElement);
+    }
+    return newData;
   }
 }
